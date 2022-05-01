@@ -2,12 +2,12 @@ const requestInstance = require("../request-instance").getReqInstance;
 
 const ENDPOINT = "https://api.cognitive.microsofttranslator.com/";
 
-exports.getTranslatedData = (req, res, next) => {
+exports.getDictionaryData = (req, res, next) => {
   let texts = req.body;
   let fromLang = req.query.from;
   let toLang = req.query.to;
   return requestInstance
-    .post("/translate", texts, {
+    .post("/dictionary/lookup", texts, {
       baseURL: ENDPOINT,
       params: {
         "api-version": "3.0",
@@ -20,7 +20,7 @@ exports.getTranslatedData = (req, res, next) => {
     })
     .catch((e) => {
       res.json({
-        message: "Error translating the text",
+        message: "Error in dictionary lookup",
       });
     });
 };

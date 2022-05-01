@@ -7,6 +7,9 @@ const supportedFileExt = "txt";
 
 exports.retrieveDocContent = (req, res, next) => {
   let fileName = req.query.fileName;
+  if (fileName.includes(".")) {
+    fileName = fileName.substring(0, fileName.indexOf("."));
+  }
   axios
     .get(`${transEnd}/${fileName}.${supportedFileExt}?${queryParams}`)
     .then((resp3) => {

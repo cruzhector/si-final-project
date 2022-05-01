@@ -23,7 +23,11 @@ Assuming that node js is installed in the machine
 ## Usage
 
 Please refer the below links to learn more about the APIs and testing.
+
 - [Text API](./docs/Text.md)
 - [Document API](./docs/Document.md)
+- [Digital Ocean Swagger API playground](http://137.184.49.245:3000/api-docs/)
 
-
+## References
+- [Express.js](https://expressjs.com/)
+- [Swagger with express](https://www.npmjs.com/package/swagger-ui-express)

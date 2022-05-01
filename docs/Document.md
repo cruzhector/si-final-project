@@ -5,6 +5,9 @@
 Docuemnt is the parent route for BLOB Docuement translation and retrieval API.
 **Due to Azure API limitation only text file is supported through the REST API**
 
+Reference to the Azure API [Document translation](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/document-translation/get-started-with-document-translation?tabs=nodejs)
+
+
 ### /upload
 
 Given the filename as query parameter and language to be converted with body as BLOB. This endpoint uploads a text file to the azure blob storage and translates the document.
@@ -12,7 +15,7 @@ Given the filename as query parameter and language to be converted with body as 
 **Sample 1**
 
 - Request
-  - method - `POST`
+  - method - `PUT`
   - URL - `http://localhost:3000/document/upload?fileName=testfile&to=de`
   - Headers - **Do not specify any. Postman will automatically add**
   - body - **Choose raw option and select text in postman. Do not use JSON**
@@ -44,9 +47,7 @@ Returns the translated text from the BLOB. To test this API
 - Request
   - method - `GET`
   - URL - `http://localhost:3000/document/content?fileName=today5-de`
-fileName=testfile&to=de`
   - Headers - **Do not specify any. Postman will automatically add**
-
 - Response - a translated text.
 
 ```

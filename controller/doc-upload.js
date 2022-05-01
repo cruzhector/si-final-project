@@ -12,6 +12,9 @@ const tranlaterEndPoint =
 exports.uploadDoc = (req, res, next) => {
   let fileName = req.query.fileName;
   let to = req.query.to;
+  if (fileName.includes(".")) {
+    fileName = fileName.substring(0, fileName.indexOf("."));
+  }
   let targetLang = [];
   if (typeof to === "string") {
     targetLang.push({
