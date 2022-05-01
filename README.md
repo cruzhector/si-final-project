@@ -31,3 +31,4 @@ Please refer the below links to learn more about the APIs and testing.
 ## References
 - [Express.js](https://expressjs.com/)
 - [Swagger with express](https://www.npmjs.com/package/swagger-ui-express)
+- [Azure Cognitive Services Translator documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/)
