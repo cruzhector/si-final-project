@@ -17,4 +17,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/text", textRouter);
 app.use("/document", docRouter);
 
+app.get("/", (req, res) => {
+  res.send(
+    "<h1>Welcome to Azure Text and Document translator please explore the documentation.</h1>"
+  );
+});
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
