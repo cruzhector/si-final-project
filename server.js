@@ -43,7 +43,7 @@ app.use("/text", textRouter);
 app.use("/document", docRouter);
 app.get("/", (req, res) => {
   res.send(
-    "<span><h3>Welcome to Azure Text and Document translator, please explore the documentation.</h3><a href='https://github.com/cruzhector/si-final-project/blob/master/README.md'>Documentation link</a></span>"
+    "<span><h3>Welcome to Azure Text and Document translator, please explore the documentation.</h3><a href='https://github.com/cruzhector/si-final-project/blob/master/README.md'>Documentation link</a><br/><br/><a href='http://137.184.49.245:3000/api-docs/'>Swagger API Playground</a></span>"
   );
 });
 

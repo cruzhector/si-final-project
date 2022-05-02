@@ -24,7 +24,6 @@ exports.retrieveDocContent = (req, res, next) => {
       }
     })
     .catch((e) => {
-      console.log(e);
       res.json({
         message:
           "Could not find the Blob, please check your filename and try again.",

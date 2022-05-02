@@ -30,7 +30,6 @@ exports.uploadDoc = (req, res, next) => {
     }
   }
   let content = req.body;
-  console.log(content);
   let headers = {
     "x-ms-date": new Date().toUTCString(),
     "x-ms-version": "2021-04-10",
@@ -51,7 +50,6 @@ exports.uploadDoc = (req, res, next) => {
   axios
     .put(fullPath, content, { headers: headers })
     .then((resp) => {
-      console.log(resp.status);
       if (resp.status == 200 || resp.status == 201 || resp.status == 202) {
         axios
           .post(tranlaterEndPoint, data, {
@@ -60,11 +58,9 @@ exports.uploadDoc = (req, res, next) => {
             },
           })
           .then((resp2) => {
-            console.log(resp2.status);
             if (resp2.status == 200 || resp2.status == 202) {
               let filesArr = [];
               targetLang.forEach((item) => {
-                console.log(item);
                 filesArr.push(
                   item.targetUrl
                     .replace(`${transEnd}/`, "")
@@ -83,7 +79,6 @@ exports.uploadDoc = (req, res, next) => {
             }
           })
           .catch((e) => {
-            console.log(e);
             res.json({
               message: "Error occured while translating.",
             });
@@ -95,7 +90,6 @@ exports.uploadDoc = (req, res, next) => {
       }
     })
     .catch((e) => {
-      console.log(e);
       res.json({
         message: "Could not write into BLOB.",
       });

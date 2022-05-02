@@ -15,7 +15,6 @@ exports.detectLanguage = (req, res, next) => {
       res.json(resp.data);
     })
     .catch((e) => {
-      console.log(e);
       res.json({
         message: "Error detecting text",
       });

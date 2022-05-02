@@ -18,7 +18,6 @@ exports.getFileFormats = (req, res, next) => {
       res.json(response.data);
     })
     .catch(function (error) {
-      console.log(error);
       res.json({
         message: "Error getting file formats",
       });

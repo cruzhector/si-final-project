@@ -23,7 +23,7 @@ Assuming that node js is installed in the machine
 ## Usage
 
 Please refer the below links to learn more about the APIs and testing.
-
+- [Azure supported languages](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/language-support)
 - [Text API](./docs/Text.md)
 - [Document API](./docs/Document.md)
 - [Digital Ocean Swagger API playground](http://137.184.49.245:3000/api-docs/)
