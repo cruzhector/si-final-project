@@ -14,7 +14,7 @@ Translates the text. Few example postman request and response
 
 - Request
   - method - `POST`
-  - URL - `http://localhost:3000/text/translate?from=en&to=te`
+  - URL - `http://137.184.49.245:3000/text/translate?from=en&to=te`
   - Headers - `Content-Type:application/json`
   - body - ```[{"text": "Hello World!"}]```
 - Response
@@ -36,9 +36,10 @@ Translates the text. Few example postman request and response
 
 - Request
   - method - `POST`
-  - URL - `http://localhost:3000/text/translate?from=en&to=te&to=fr`
+  - URL - `http://137.184.49.245:3000/text/translate?from=en&to=te&to=fr`
   - Headers - `Content-Type:application/json`
   - body - ```[{"text": "Hello World!"}]```
+
 - Response
 
 ```
@@ -57,6 +58,12 @@ Translates the text. Few example postman request and response
     }
 ]
 ```
+**Postman Request**
+![Request](./images/text-translate-req.PNG)
+
+**Postman Response**
+![Response](./images/text-translate-res.PNG)
+
 
 ### /detect
 
@@ -66,7 +73,7 @@ Detects the language. Few example postman request and response
 
 - Request
   - method - `POST`
-  - URL - `http://localhost:3000/text/detect`
+  - URL - `http://137.184.49.245:3000/text/detect`
   - Headers - `Content-Type:application/json`
   - body
 
@@ -88,6 +95,11 @@ Detects the language. Few example postman request and response
     }
 ]
 ```
+**Postman Request**
+![Request](./images/detect-req.PNG)
+
+**Postman Response**
+![Response](./images/detect-res.PNG)
 
 ### /dict-lookup
 
@@ -97,7 +109,7 @@ Returns alternate Translations the text. Few example postman request and respons
 
 - Request
   - method - `POST`
-  - URL - `http://localhost:3000/text/translate?from=en&to=fr`
+  - URL - `http://137.184.49.245:3000/text/translate?from=en&to=fr`
   - Headers - `Content-Type:application/json`
   - body - ```[{"text": "shark"}]```
 - Response
@@ -133,3 +145,8 @@ Returns alternate Translations the text. Few example postman request and respons
   }
 ]
 ```
+**Postman Request**
+![Request](./images/dict-req.PNG)
+
+**Postman Response**
+![Response](./images/dict-res.PNG)

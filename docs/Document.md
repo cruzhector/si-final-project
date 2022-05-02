@@ -16,7 +16,7 @@ Given the filename as query parameter and language to be converted with body as 
 
 - Request
   - method - `PUT`
-  - URL - `http://localhost:3000/document/upload?fileName=testfile&to=de`
+  - URL - `http://137.184.49.245:3000/document/upload?fileName=testfile&to=de`
   - Headers - **Do not specify any. Postman will automatically add**
   - body - **Choose raw option and select text in postman. Do not use JSON**
 
@@ -34,6 +34,16 @@ Where are you going
     ]
 }
 ```
+**Postman Request**
+![Request](./images/doc-req.PNG)
+
+**Postman Response**
+![Response](./images/doc-res.PNG)
+
+**Azure storage**
+![Request](./images/doc-azure.PNG)
+
+![Response](./images/tl-azure.PNG)
 
 ### /content
 
@@ -46,14 +56,15 @@ Returns the translated text from the BLOB. To test this API
 
 - Request
   - method - `GET`
-  - URL - `http://localhost:3000/document/content?fileName=today5-de`
+  - URL - `http://137.184.49.245:3000/document/content?fileName=today5-de`
   - Headers - **Do not specify any. Postman will automatically add**
 - Response - a translated text.
 
 ```
 Wohin gehst du
 ```
-
+**Postman Request/Response**
+![Request/Response](./images/content-req-res.PNG)
 ### /formats
 
 Gets all the supported formats by document translator API.
@@ -62,7 +73,10 @@ Gets all the supported formats by document translator API.
 
 - Request
   - method - `GET`
-  - URL - `http://localhost:3000/document/formats`
+  - URL - `http://137.184.49.245:3000/document/formats`
   - Headers - **Do not specify any. Postman will automatically add**
 
 - Response - List of all the supported documents.
+
+**Postman Request/Response**
+![Request/Response](./images/format-req-res.PNG)
